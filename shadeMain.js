@@ -74,9 +74,9 @@
     gl.uniform1f(kd, 0.5);
     var ke = gl.getUniformLocation(program, "ke");
     gl.uniform1f(ke, 1);
-    let modelMatrix = glMatrix.mat4.create();
-    glMatrix.mat4.scale(modelMatrix, modelMatrix, [3,3, 3]);
-    gl.uniformMatrix4fv(program.uModelT, false, modelMatrix);
+    let matrix = glMatrix.mat4.create();
+    glMatrix.mat4.scale(matrix, matrix, [3,3, 3]);
+    gl.uniformMatrix4fv(program.uModelT, false, matrix);
   }
   
 
